@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu País</title>
+</head>
+<body>
+    <h1>De onde você é?</h1>
+    <p>Informe seu nome: <input type="text" name="nome" id="nome"></p>  
+    <p>Informe o seu país: <input type="text" name="pais" id="pais"></p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() {
+            var nm = window.document.querySelector('input#nome')
+            var ps = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Olá <strong>${nm.value}!</strong> Como vai você?</p>`
+            if (ps.value == 'Brasil') {
+                res.innerHTML += `<p>Como você é do ${ps.value}, você é <strong>Brasileiro(a)!</strong</p>`
+            }   else {
+                    res.innerHTML += `<p>Como você é do(a) ${ps.value}, você é <strong>Estrangeiro(a)!</strong></p>`
+                }
+            
+        }
+    </script>
+</body>
+</html>
