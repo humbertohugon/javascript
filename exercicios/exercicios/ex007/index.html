@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+
+        input {
+            font-size: 12pt;
+            padding: 30px;
+        }
+
+        div#res {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v1.0</h1>
+
+    <input type="button" value="Calcular média" onclick="calcular()">
+
+    <div id="res">
+        O resultado vai aparecer aqui...
+    </div>
+
+    <script>
+        function calcular() {
+            var nom = prompt('Qual é o nome do aluno?')
+            var tn1 = prompt(`Qual foi a primeira nota de ${nom}?`)
+            var n1 = Number(tn1)
+            var tn2 = prompt(`Além de ${n1}, qual foi a outra nota de ${nom}?`)
+            var n2 = Number(tn2)
+            var med = (n1 + n2)/2
+            res.innerHTML = `<p>Calculando a média final de <span style="background-color: yellow">${nom}</span>.</p>`
+            res.innerHTML += `<p>As notas obtidas foram <span style="background-color: yellow">${n1} e ${n2}</span>.</p>`
+            res.innerHTML += `<p>A média final será <span style="background-color: yellow">${med}</span>.</p>`
+        }
+    </script>
+</body>
+</html>

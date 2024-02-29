@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Externo</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+
+    <input type="button" value="Ação 1" onclick="clicar1()">
+    <input type="button" value="Ação 2" onclick="clicar2()">
+    <input type="button" value="Ação 3" onclick="clicar3()">
+    <input type="button" value="Ação 4" onclick="clicar4()">
+    <input type="button" value="Zerar" onclick="zerar()">
+    <div id="res">
+        Aqui vou registrar suas ações com os botões acima
+    </div>
+    <script>
+        function clicar1() {
+            res.innerHTML += '<p>Clicou no primeiro botão</p>' 
+        }
+        function clicar2() {
+            res.innerHTML += '<p>Clicou no segundo botão</p>' 
+        }
+        function clicar3() {
+            res.innerHTML += '<p>Clicou no terceiro botão</p>' 
+        }
+        function clicar4() {
+            res.innerHTML += '<p>Clicou no quarto botão</p>' 
+        }
+        function zerar() {
+            res.innerHTML = 'Aqui vou registrar suas ações com os botões acima'
+        }
+    </script>
+</body>
+</html>

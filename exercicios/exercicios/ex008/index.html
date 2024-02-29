@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            font-size: 12pt;
+            padding: 30px;
+        }
+
+        div#res {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+
+    <input type="button" value="Clique para calcular" onclick="calcular()">
+
+    <div id="res">
+        O resultado vai aparecer aqui...
+    </div>
+    <script>
+        function calcular() {
+            var tnum = prompt('Digite um número:')
+            var num = Number(tnum)
+            var inum = Number.parseInt(num)
+            var prox = Math.round(tnum)
+            var rquad = Math.sqrt(tnum)
+            var rcub = Math.cbrt(tnum)
+            var quad = Math.pow(tnum,2)
+            var cub = Math.pow(tnum,3)
+
+            res.innerHTML = `<p> O número a ser analisado aqui será o <strong>${num}</strong>`
+            res.innerHTML += "------------------------------------"
+            res.innerHTML += `<p> O seu valor absoluto é ${num}`
+            res.innerHTML += `<p> A sua parte inteira é ${inum}`
+            res.innerHTML += `<p> O valor inteiro mais próximo é ${prox}` 
+            res.innerHTML += `<p> A sua raiz quadrada é ${rquad}`
+            res.innerHTML += `<p> A sua raiz cúbica é ${rcub}`
+            res.innerHTML += `<p> O valor de ${tnum}<sup>2</sup> é ${quad}`
+            res.innerHTML += `<p> O valor de ${tnum}<sup>3</sup> é ${cub}`
+        }
+    </script>
+</body>
+</html>

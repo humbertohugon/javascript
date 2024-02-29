@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com números</h1>
+
+    <input type="button" value="Clique para calcular" onclick="clicar()">
+
+    <div id="res">
+        O resultado vem aqui...
+    </div>
+    <script>
+        window.alert('Seja bem vindo(a) ao meu site!')
+        function clicar() {
+            var tnum = prompt('Digite um número:')
+            var num = Number(tnum)
+            var dob = num*2
+            var met = num/2
+            res.innerHTML = `O dobro de ${num} é ${dob} e a metade é ${met}!`
+        }
+    </script>
+</body>
+</html>
