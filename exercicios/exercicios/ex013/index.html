@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior valor</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maior valor</h1>
+    <input type="button" value="Clique para começar" onclick="calcular()">
+    <div id="res">
+        O resultado vai aparecer aqui...
+    </div>
+    <script>
+        function calcular() {
+            var num1 = prompt('Digite um número:')
+            var num2 = prompt('Digte outro número:')
+            var n1 = Number(num1)
+            var n2 = Number(num2)
+
+            if (n1 > n2) {
+                res.innerHTML = `Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n1}</strong>`
+            } if (n1 == n2) {
+                 res.innerHTML = `Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, ambos são <strong>IGUAIS</strong>`
+            } else {
+                res.innerHTML = `Analisando os valores <mark>${n1}</mark> e <mark>${n2}</mark>, o maior valor é <strong>${n2}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

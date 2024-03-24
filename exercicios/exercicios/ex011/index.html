@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Média do aluno v2.0</h1>
+    <input type="button" value="Calcular média" onclick="clicar()">
+    <div id="res">
+        O resultado vai aparecer aqui...
+    </div>
+    <script>
+        function clicar() {
+            var nome = prompt('Qual é o nome do aluno?')
+            var not1 = prompt(`Qual foi a primeira nota de ${nome}?`)
+            var not2 = prompt(`Além de ${not1}, qual foi a outra nota de ${nome}?`)
+            var n1 = Number(not1)
+            var n2 = Number(not2)
+            var med = (n1+n2)/2
+
+            res.innerHTML = `<p>Calculando a média final de <mark>${nome}</mark>.</p>`
+            res.innerHTML += `<p>As notas obtidas foram <mark>${n1} e ${n2}</mark>.</p>`
+            res.innerHTML += `<p>A média final será <mark>${med}</mark>.</p>`
+            if (med < 6) {
+                res.innerHTML += `<p>A mensagem que temos é: <strong>Estude um pouco mais!</strong></p>`
+            }
+            else {
+                    res.innerHTML += `<p>A mensagem que temos é: <strong>Meus parabéns!</strong></p>`
+                }
+        }
+    </script>
+</body>
+</html>
