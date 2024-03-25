@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Múltiplas Ações</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Múltiplas Ações</h1>
+    <input type="button" value="Clique para Iniciar" onclick="calcular()">
+    <div id="res">
+        Clique no botão acima para começar.
+    </div>
+    <script>
+        function calcular() {
+            var val1 = prompt('Primeiro valor:')
+            var val2 = prompt('Segundo valor:')
+            var v1 = Number(val1)
+            var v2 = Number(val2)
+            var conta = prompt(`Valores informados ${v1} e ${v2}.
+            O que vamos fazer?
+            [1] Somar
+            [2] Subtrair
+            [3] Multiplicar
+            [4] Dividir`)
+            var cont = Number(conta)
+            var soma = v1+v2
+            var sub = v1-v2
+            var mult = v1*v2
+            var div = v1/v2
+
+            if (cont == 1) {
+                res.innerHTML = `Calculando...`
+                res.innerHTML += `<p> ${v1} + ${v2} = <strong>${soma}</strong></p>`
+            } if (cont == 2) {
+                res.innerHTML = `Calculando...`
+                res.innerHTML += `<p> ${v1} - ${v2} = <strong>${sub}</strong></p>`
+            } if (cont == 3) {
+                res.innerHTML = `Calculando...`
+                res.innerHTML += `<p> ${v1} x ${v2} = <strong>${mult}</strong></p>`
+            } if (cont == 4) {
+                res.innerHTML = `Calculando...`
+                res.innerHTML += `<p> ${v1} / ${v2} = <strong>${div}</strong></p>`
+            } if (cont < 1 || cont > 4) {
+                res.innerHTML = `Calculando...`
+                res.innerHTML += `<p>OPÇÃO INVÁLIDA! Você digitou ${v1} e ${v2}, mas não sei o que fazer com eles.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

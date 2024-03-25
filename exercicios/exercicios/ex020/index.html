@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação do Ano</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra a estação do ano</h1>
+    <input type="button" value="Informe o mês aqui" onclick="calcular()">
+    <div id="res">
+        Clique no botão acima para informar o mês.
+    </div>
+    <script>
+        function calcular() {
+            var mes = prompt('Digite o mês em extenso (ex: Setembro)')
+            if (mes == 'janeiro' || mes == 'Janeiro' || mes == 'fevereiro' || mes == 'Fevereiro' || mes == 'março' || mes == 'Março') {
+                res.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><strong>VERÃO</strong></mark>.`
+            }   if (mes == 'abril' || mes == 'Abril' || mes == 'maio' || mes == 'Maio' || mes == 'junho' || mes == 'Junho') {
+                res.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><strong>OUTONO</strong></mark>.`
+            }   if (mes == 'julho' || mes == 'Julho' || mes == 'agosto' || mes == 'Agosto' || mes == 'setembro' || mes == 'Setembro') {
+                res.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><strong>INVERNO</strong></mark>.`
+            }   if (mes == 'outubro' || mes == 'Outubro' || mes == 'novembro' || mes == 'Novembro' || mes == 'dezembro' || mes == 'Dezembro') {
+                res.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação <mark><strong>PRIMAVERA</strong></mark>.`
+            }
+            
+        }
+    </script>
+</body>
+</html>

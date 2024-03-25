@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o Sistema</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo com o Sistema</h1>
+    <input type="button" value="Clique em mim" onclick="clicar()">
+    <div id="res">
+        Aqui vai aparecer algo...
+    </div>
+    <script>
+        function clicar() {
+            var data = Date()
+            res.innerHTML = `O que eu recebi do sistema foi <mark>${data}</mark>`
+        }
+    </script>
+</body>
+</html>

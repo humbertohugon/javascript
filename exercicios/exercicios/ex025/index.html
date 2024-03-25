@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados de Formulário</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contando de 0 até um número positivo qualquer</h1>
+    <main>
+        Esoclha o limite final para a contagem a partir do 0 (digite apenas números positivos)
+        <form action="" method="get">
+            <label for="valor">Valor final:</label>
+            <input type="number" name="val" id="val" min="0">
+            <input type="button" value="Contar" onclick="contar()">
+        </form>
+    </main>
+    <div id="res">
+        Preencha os dados acima e aperte o botão.
+    </div>
+    <script>
+        function contar() {
+            var saida = document.getElementById('res')
+            var fim = document.getElementById('val')
+            var f = Number(fim)
+            
+            saida.innerHTML += `<h2>Contando de 0 até ${f}</h2>`
+
+            var cont = 0
+
+            while (cont <= f) {
+                saida.innerHTML += ` ${cont} &#x1F449;`
+                cont ++ // Corresponde a cont = cont + 1
+            }
+            saida.innerHTML += ` &#x1F3C1;`
+        }
+    </script>
+</body>
+</html>

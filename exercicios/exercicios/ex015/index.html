@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisando Data e Hora</title>
+    <style>
+        body {
+            font: normal 12pt Arial;
+        }
+        input {
+            padding: 30px;
+            font-size: 12pt;
+        }
+        div#res {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analisando data e hora do Sistema</h1>
+    <input type="button" value="Iniciar Análise" onclick="contar()">
+    <div id="res">
+        Aqui vai aparecer algo...
+    </div>
+    <script>
+        function contar() {
+            now = new Date
+            var dia = now.getDate()
+            var mes = now.getMonth()
+            var ano = now.getFullYear()
+            var sem = now.getDay()
+            var hora = now.getHours()
+            var min = now.getMinutes()
+            var seg = now.getSeconds()
+            
+            
+            res.innerHTML = `Dia: <mark>${dia}</mark>`
+            res.innerHTML += `<p>Mês: <mark>${mes}</mark></p>`
+            res.innerHTML += `<p>Ano: <mark>${ano}</mark></p>`
+            res.innerHTML += `<p>Dia da semana: <mark>${sem}</mark></p>`
+            res.innerHTML += `<p>Hora: <mark>${hora}</mark></p>`
+            res.innerHTML += `<p>Minutos: <mark>${min}</mark></p>`
+            res.innerHTML += `<p>Segundos: <mark>${seg}</mark></p>`
+        }
+    </script>
+</body>
+</html>
